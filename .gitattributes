@@ -1,2 +1,35 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# calculator.py
+
+def add(x, y):
+    return x + y
+
+def subtract(x, y):
+    return x - y
+
+def multiply(x, y):
+    return x * y
+
+def divide(x, y):
+    if y == 0:
+        return "Error! Division by zero."
+    return x / y
+
+def calculator():
+    print("Welcome to Micah's Calculator!")
+    x = float(input("Enter the first number: "))
+    operator = input("Enter the operator (+, -, *, /): ")
+    y = float(input("Enter the second number: "))
+
+    if operator == '+':
+        print("Result:", add(x, y))
+    elif operator == '-':
+        print("Result:", subtract(x, y))
+    elif operator == '*':
+        print("Result:", multiply(x, y))
+    elif operator == '/':
+        print("Result:", divide(x, y))
+    else:
+        print("Invalid operator!")
+
+if __name__ == "__main__":
+    calculator()
